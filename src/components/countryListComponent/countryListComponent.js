@@ -18,21 +18,26 @@ function CountryListComponent(props) {
   const classes = useStyles();
   const { data } = props;
 
+  if (data && data.length === 0) return null;
+
   return (
     <Box className={classes.weatherList}>
-      {[data].map(countryDetails => (
-        <CountrySingleComponent
-          key={countryDetails.country}
-          country={countryDetails.country}
-          countryCapital={countryDetails.countryCapital}
-          countryPopulation={countryDetails.countryPopulation}
-          countryFlag={countryDetails.countryFlag}
-          countryRegion={countryDetails.countryRegion}
-          countryCurrencies={countryDetails.countryCurrencies}
-          countryLanguages={countryDetails.countryLanguages}
-          countryBorders={countryDetails.countryBorders}
-        />
-      ))}
+      {[data].map(countryDetails => {
+        console.log(countryDetails);
+        return (
+          <CountrySingleComponent
+            key={countryDetails.name}
+            country={countryDetails.name}
+            countryCapital={countryDetails.capital}
+            countryPopulation={countryDetails.population}
+            countryFlag={countryDetails.flag}
+            countryRegion={countryDetails.region}
+            countryCurrencies={countryDetails.currencies[0].name}
+            countryLanguages={countryDetails.languages[0].nativeName}
+            countryBorders={countryDetails.borders}
+          />
+        );
+      })}
     </Box>
   );
 }

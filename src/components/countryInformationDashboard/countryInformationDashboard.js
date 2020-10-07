@@ -42,18 +42,6 @@ function CountryInformationDashboard({ props }) {
         const eightCountryFacts = response.find(
           ({ name }) => name === "Norway"
         );
-        response.map(response => {
-          return {
-            countryFlag: response.flag,
-            country: response.name,
-            countryCapital: response.capital,
-            countryPopulation: response.population,
-            countryRegion: response.region,
-            countryCurrencies: response.currencies,
-            countryLanguages: response.languages,
-            countryBorders: response.borders
-          };
-        });
         setCountryData(eightCountryFacts);
         console.log("A: ", response);
         console.log("B: ", eightCountryFacts);
@@ -95,7 +83,6 @@ function CountryInformationDashboard({ props }) {
             countryOption={countryOption}
           />
         </Box>
-
         <CountryListComponent data={countryData} />
       </Box>
     </>
