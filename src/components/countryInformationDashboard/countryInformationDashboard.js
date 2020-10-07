@@ -38,25 +38,25 @@ function CountryInformationDashboard({ props }) {
     )
       .then(response => response.json())
       .then(response => {
-        console.log(response);
-        if (!response || !response.data) return;
-        const eightCountryFacts = response
-          .find(response => response.name === "norway")
-          .map(response => {
-            return {
-              countryFlag: response.flag,
-              country: response.name,
-              countryCapital: response.capital,
-              countryPopulation: response.population,
-              countryRegion: response.region,
-              countryCurrencies: response.currencies,
-              countryLanguages: response.languages,
-              countryBorders: response.borders
-            };
-          });
-
+        if (!response) return;
+        const eightCountryFacts = response.find(
+          ({ name }) => name === "Norway"
+        );
+        response.map(response => {
+          return {
+            countryFlag: response.flag,
+            country: response.name,
+            countryCapital: response.capital,
+            countryPopulation: response.population,
+            countryRegion: response.region,
+            countryCurrencies: response.currencies,
+            countryLanguages: response.languages,
+            countryBorders: response.borders
+          };
+        });
         setCountryData(eightCountryFacts);
-        console.log(eightCountryFacts);
+        console.log("A: ", response);
+        console.log("B: ", eightCountryFacts);
       });
 
     const unsplash = new Unsplash({

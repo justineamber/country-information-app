@@ -38,9 +38,11 @@ function CountrySingleComponent(props) {
 
   return (
     <Box className={classes.weatherSingleContainer}>
-      <Typography variant="h5" className={classes.titleSingle}>
-        {countryFlag}
-      </Typography>
+      <img
+        className={classes.weatherSingle}
+        src={`https://restcountries.eu/data/${countryFlag}.svg`}
+        alt="country flag"
+      />
 
       <Typography variant="h5" className={classes.titleSingle}>
         {country}

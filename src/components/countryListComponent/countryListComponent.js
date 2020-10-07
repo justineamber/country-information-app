@@ -20,13 +20,13 @@ function CountryListComponent(props) {
 
   return (
     <Box className={classes.weatherList}>
-      {data.map(countryDetails => (
+      {[data].map(countryDetails => (
         <CountrySingleComponent
-          countryFlag={countryDetails.countryFlag}
           key={countryDetails.country}
           country={countryDetails.country}
           countryCapital={countryDetails.countryCapital}
           countryPopulation={countryDetails.countryPopulation}
+          countryFlag={countryDetails.countryFlag}
           countryRegion={countryDetails.countryRegion}
           countryCurrencies={countryDetails.countryCurrencies}
           countryLanguages={countryDetails.countryLanguages}
