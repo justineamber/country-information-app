@@ -4,12 +4,11 @@ import CountrySingleComponent from "../countrySingleComponent/countrySingleCompo
 
 const useStyles = makeStyles(theme => ({
   weatherList: {
-    backgroundColor: "#fff",
+    backgroundColor: "#222831",
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
     padding: "1.5rem 0",
     marginTop: theme.spacing(4),
-    overflowX: "auto",
     width: "100%"
   }
 }));
@@ -23,7 +22,6 @@ function CountryListComponent(props) {
   return (
     <Box className={classes.weatherList}>
       {[data].map(countryDetails => {
-        console.log(countryDetails);
         return (
           <CountrySingleComponent
             key={countryDetails.name}
@@ -34,7 +32,6 @@ function CountryListComponent(props) {
             countryRegion={countryDetails.region}
             countryCurrencies={countryDetails.currencies[0].name}
             countryLanguages={countryDetails.languages[0].nativeName}
-            countryBorders={countryDetails.borders}
           />
         );
       })}

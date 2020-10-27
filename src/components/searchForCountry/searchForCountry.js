@@ -39,7 +39,7 @@ function SearchForCountry(props) {
           renderInput={params => (
             <TextField
               {...params}
-              label="Search country"
+              label="Select a country"
               variant="filled"
               className={classes.inputBackgroundColor}
             />

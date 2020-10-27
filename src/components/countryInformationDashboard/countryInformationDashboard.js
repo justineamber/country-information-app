@@ -34,17 +34,15 @@ function CountryInformationDashboard({ props }) {
 
   useEffect(() => {
     fetch(
-      `https://restcountries.eu/rest/v2/all?fields=name;capital;currencies;borders;population;flag;languages;region`
+      `https://restcountries.eu/rest/v2/all?fields=name;capital;currencies;population;flag;languages;region`
     )
       .then(response => response.json())
       .then(response => {
         if (!response) return;
         const eightCountryFacts = response.find(
-          ({ name }) => name === "Norway"
+          ({ name }) => name === `${countryName}`
         );
         setCountryData(eightCountryFacts);
-        console.log("A: ", response);
-        console.log("B: ", eightCountryFacts);
       });
 
     const unsplash = new Unsplash({
