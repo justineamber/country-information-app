@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
 
 function CountryInformationDashboard({ props }) {
   const [countryData, setCountryData] = useState([]);
-  const [countryName, setCountryName] = useState(countryOption[142]);
+  const [countryName, setCountryName] = useState(countryOption[140]);
   const [inputValue, setInputValue] = useState("");
   const [image, setImage] = useState({
     alt: "Norwegian flag",
@@ -113,13 +113,11 @@ const countryOption = [
   "Benin",
   "Bermuda",
   "Bhutan",
-  "Bolivia",
   "Botswana",
   "Bouvet Island",
   "Brazil",
   "British Indian Ocean Territory",
   "Virgin Islands (British)",
-  "Virgin Islands (U.S)",
   "Bulgaria",
   "Burundi",
   "Cambodia",
@@ -155,7 +153,6 @@ const countryOption = [
   "Eritrea",
   "Estonia",
   "Ethiopia",
-  "Falkland Islands",
   "Faroe Islands",
   "Fiji",
   "Finland",
@@ -174,7 +171,6 @@ const countryOption = [
   "Guatemala",
   "Guinea",
   "Haiti",
-  "Holy Sea",
   "Honduras",
   "Hong Kong",
   "Hungary",
@@ -186,7 +182,7 @@ const countryOption = [
   "Iraq",
   "Ireland",
   "Isle of Man",
-  "Isreal",
+  "Israel",
   "Italy",
   "Jamaica",
   "Japan",
@@ -215,7 +211,6 @@ const countryOption = [
   "Marshall Islands",
   "Mauritius",
   "Mexico",
-  "Moldova",
   "Monaco",
   "Mongolia",
   "Montenegro",
@@ -262,8 +257,7 @@ const countryOption = [
   "Seychelles",
   "Sierra Leone",
   "Singapore",
-  "Sint Maarten",
-  "Slocakia",
+  "Slovakia",
   "Slovenia",
   "Solomon Islands",
   "Somalia",
@@ -288,7 +282,6 @@ const countryOption = [
   "Tunisia",
   "Turkey",
   "Turks and Ciacos Islands",
-  "Tulvalu",
   "Uganda",
   "Ukraine",
   "United Arab Emirates",
@@ -297,7 +290,6 @@ const countryOption = [
   "Uruguay",
   "Uzbekistan",
   "Vanuatu",
-  "Venezuela",
   "Viet Nam",
   "Wallis and Futuna",
   "Western Sahara",
