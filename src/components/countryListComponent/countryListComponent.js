@@ -4,10 +4,11 @@ import CountrySingleComponent from "../countrySingleComponent/countrySingleCompo
 
 const useStyles = makeStyles(theme => ({
   weatherList: {
-    backgroundColor: "#222831",
+    backgroundColor: "#112d4e",
     display: "flex",
     justifyContent: "center",
     padding: "1.5rem 0",
+    opacity: "0.8",
     marginTop: theme.spacing(4),
     width: "100%"
   }
