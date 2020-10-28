@@ -9,11 +9,11 @@ import Unsplash, { toJson } from "unsplash-js";
 const useStyles = makeStyles(() => ({
   weatherDashboardWrapper: {
     width: "100%",
-    height: "100%",
+    height: "170%",
     backgroundImage: image => `url(${image.url})`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center"
+    backgroundPosition: "center center fixed"
   },
   topBar: {
     display: "flex",
@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
 
 function CountryInformationDashboard({ props }) {
   const [countryData, setCountryData] = useState([]);
-  const [countryName, setCountryName] = useState(countryOption[140]);
+  const [countryName, setCountryName] = useState(countryOption[137]);
   const [inputValue, setInputValue] = useState("");
   const [image, setImage] = useState({
     alt: "Norwegian flag",
