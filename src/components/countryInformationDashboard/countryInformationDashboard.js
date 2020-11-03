@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
 
 function CountryInformationDashboard({ props }) {
   const [countryData, setCountryData] = useState([]);
-  const [countryName, setCountryName] = useState(countryOption[137]);
+  const [countryName, setCountryName] = useState(countryOption[133]);
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(null);
   const [image, setImage] = useState({
@@ -51,7 +51,7 @@ function CountryInformationDashboard({ props }) {
           ({ name }) => name === `${countryName}`
         );
         if (!countryName) {
-          return setError("Please enter valid country");
+          return setError("Please select a valid country");
         } else {
           setCountryData(eightCountryFacts);
           return setError("");
@@ -143,9 +143,7 @@ const countryOption = [
   "Chad",
   "Chile",
   "China",
-  "Christmas Islands",
   "Cocos (Keeling) Islands",
-  "Columbia",
   "Comoros",
   "Congo",
   "Congo (Democratic Republic of the)",
@@ -192,7 +190,6 @@ const countryOption = [
   "India",
   "Indonesia",
   "Côte d'Ivoire",
-  "Iran",
   "Iraq",
   "Ireland",
   "Isle of Man",
@@ -214,8 +211,6 @@ const countryOption = [
   "Liechtenstein",
   "Lithuania",
   "Luxembourg",
-  "Macao",
-  "Macedonia",
   "Madagascar",
   "Malawi",
   "Malaysia",
@@ -245,15 +240,12 @@ const countryOption = [
   "Oman",
   "Pakistan",
   "Palau",
-  "Palestine",
   "Panama",
   "Papua New Guinea",
   "Paraguay",
-  "Peru",
-  "Phillippines",
+  "Philippines",
   "Poland",
   "Portugal",
-  "Peurto Rico",
   "Qatar",
   "Réunion",
   "Romania",
@@ -261,7 +253,6 @@ const countryOption = [
   "Rwanda",
   "Saint Kitts and Nevis",
   "Saint Lucia",
-  "Saint Martin",
   "Saint Pierre and Miquelon",
   "Samoa",
   "San Marino",
@@ -276,7 +267,6 @@ const countryOption = [
   "Solomon Islands",
   "Somalia",
   "South Africa",
-  "Korea(Republic of)",
   "South Sudan",
   "Spain",
   "Sri Lanka",
@@ -288,14 +278,12 @@ const countryOption = [
   "Syrian Arab Republic",
   "Taiwan",
   "Tajikistan",
-  "Tanzania",
-  "Thialand",
+  "Thailand",
   "Togo",
   "Tonga",
   "Trinidad and Tobago",
   "Tunisia",
   "Turkey",
-  "Turks and Ciacos Islands",
   "Uganda",
   "Ukraine",
   "United Arab Emirates",
