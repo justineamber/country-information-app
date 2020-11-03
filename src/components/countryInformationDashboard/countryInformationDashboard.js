@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
 
 function CountryInformationDashboard({ props }) {
   const [countryData, setCountryData] = useState([]);
-  const [countryName, setCountryName] = useState(countryOption[133]);
+  const [countryName, setCountryName] = useState(countryOption[132]);
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(null);
   const [image, setImage] = useState({
