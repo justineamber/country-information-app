@@ -18,6 +18,12 @@ const useStyles = makeStyles(() => ({
   topBar: {
     display: "flex",
     position: "relative"
+  },
+  errorTextStyle: {
+    display: "flex",
+    justifyContent: "center",
+    color: "#e84545",
+    fontSize: "1.5rem"
   }
 }));
 
@@ -25,6 +31,7 @@ function CountryInformationDashboard({ props }) {
   const [countryData, setCountryData] = useState([]);
   const [countryName, setCountryName] = useState(countryOption[137]);
   const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState(null);
   const [image, setImage] = useState({
     alt: "Norwegian flag",
     url: Image
@@ -39,10 +46,16 @@ function CountryInformationDashboard({ props }) {
       .then(response => response.json())
       .then(response => {
         if (!response) return;
+
         const eightCountryFacts = response.find(
           ({ name }) => name === `${countryName}`
         );
-        setCountryData(eightCountryFacts);
+        if (!countryName) {
+          return setError("Please enter valid country");
+        } else {
+          setCountryData(eightCountryFacts);
+          return setError("");
+        }
       });
 
     const unsplash = new Unsplash({
@@ -81,6 +94,7 @@ function CountryInformationDashboard({ props }) {
             countryOption={countryOption}
           />
         </Box>
+        {error && <p className={classes.errorTextStyle}>{error}</p>}
         <CountryListComponent data={countryData} />
       </Box>
     </>
